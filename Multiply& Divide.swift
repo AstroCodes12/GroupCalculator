@@ -18,11 +18,11 @@ print("Enter Function Number Here:")
 var funcNumber = Int(readLine()!)!
 
 print("Now enter your two numbers:")
-let numberA = Int(readLine()!)!
-let numberB = Int(readLine()!)!
+let numberA = Double(readLine()!)!
+let numberB = Double(readLine()!)!
 
 if funcNumber == 6 {
- print(numberA % numberB)
+    print(Int(numberA) % Int(numberB))
 }
 else if funcNumber == 5 {
   result = pow(numberA, numberB)
@@ -38,6 +38,4 @@ else if funcNumber == 5 {
        print(numberA / numberB)
 }
 }
-
-
   

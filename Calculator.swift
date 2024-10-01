@@ -13,18 +13,23 @@ Select an operation:
 """)
 }
 
-showMenu() //displays menu
+func calcFunctions() {
 print("Enter Function Number Here:")
-guard var funcNumber = Int(readLine()!)! else {
-    print("Please enter a viable Integer")
+
+guard let funcNumber = Int(readLine()!) else {
+    print("Please enter a viable Integer or number between 1 and 6")
+    return
 }
 
+
 print("Now enter your two numbers:")
-guard let numberA = Double(readLine()!)! else {
+guard let numberA = Double(readLine()!) else {
      print("Please enter a viable Integer")
+     return
 }
-guard let numberB = Double(readLine()!)! else {
+guard let numberB = Double(readLine()!) else {
      print("Please enter a viable Integer")
+     return
 }
 
 if funcNumber == 6{
@@ -46,4 +51,13 @@ else if funcNumber == 5 {
     print(numberA - numberB)
 }else if funcNumber == 1{
     print(numberA + numberB)
+}
+
+}
+
+//restarts after user finishes input
+while true {
+    showMenu()
+    calcFunctions()
+    print("\n\n\n")
 }

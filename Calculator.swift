@@ -15,11 +15,17 @@ Select an operation:
 
 showMenu() //displays menu
 print("Enter Function Number Here:")
-var funcNumber = Int(readLine()!)!
+guard var funcNumber = Int(readLine()!)! else {
+    print("Please enter a viable Integer")
+}
 
 print("Now enter your two numbers:")
-let numberA = Double(readLine()!)!
-let numberB = Double(readLine()!)!
+guard let numberA = Double(readLine()!)! else {
+     print("Please enter a viable Integer")
+}
+guard let numberB = Double(readLine()!)! else {
+     print("Please enter a viable Integer")
+}
 
 if funcNumber == 6{
     print(Int(numberA) % Int(numberB))
